@@ -1,0 +1,14 @@
+{
+  "name": "bancadas-app",
+  "version": "1.0.0",
+  "description": "Aplicativo para gerenciar bancadas enxertadas",
+  "main": "main.js",
+  "author": "Seu Nome",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^23.3.13"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Bancadas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gerenciar Bancadas Enxertadas</h1>
+        <p>Desenvolvido Por: Rafael Montagna</p>
+
+        <form id="bancadaForm">
+            <label for="bancada">Número da bancada:</label>
+            <input type="number" id="bancada" name="bancada" min="1" max="60" required>
+            <label for="variedade">Quantidades e Variedades Enxertadas:</label>
+            <input type="text" alt="variedade" id="variedade" name="variedade" required>
+            <button id="botao" type="button" onclick="adicionarBancada()">Adicionar</button>
+        </form>
+    </div>
+
+        <div id="lista">
+            <h2>Lista de Bancadas Enxertadas</h2>
+            <ul id="bancadaLista"></ol>
+        </div>
+    
+    
+</body>
+</html>
