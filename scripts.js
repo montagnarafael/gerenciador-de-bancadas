@@ -21,7 +21,9 @@ function carregarDados() {
 function salvarDados() {
     const lista = document.querySelectorAll('#bancadaLista li');
     const bancadas = Array.from(lista).map(item => {
-        const [numeroTexto, variedadeTexto] = item.textContent.split('|').map(t => t.trim());
+        // Extrair texto sem incluir o botão "Remover"
+        const texto = item.textContent.replace('Remover', '').trim(); // Remove o "Remover"
+        const [numeroTexto, variedadeTexto] = texto.split('|').map(t => t.trim());
         const numero = numeroTexto.split(': ')[1];
         const variedade = variedadeTexto.split(': ')[1];
         return { numero, variedade };
@@ -47,6 +49,7 @@ function adicionarBancada() {
 function adicionarItemNaLista(numero, variedade) {
     const listaItem = document.createElement("li");
     listaItem.textContent = `Número da Bancada: ${numero} | Variedades Enxertadas: ${variedade}`;
+    
     const botaoRemover = document.createElement("button");
     botaoRemover.textContent = "Remover";
 
@@ -61,3 +64,4 @@ function adicionarItemNaLista(numero, variedade) {
 
 // Carregar dados ao iniciar o programa
 window.onload = carregarDados;
+
